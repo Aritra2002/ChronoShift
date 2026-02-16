@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ChronoShift | Cyber Defence</title>
+    <meta name="description" content="ChronoShift is a high-octane, neon-drenched Tower Defense experience set in a crumbling digital frontier.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌌</text></svg>">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- React & Material UI -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/@mui/material@5.14.20/umd/material-ui.production.min.js"></script>
+    <!-- htm must be loaded after React -->
+    <script src="https://unpkg.com/htm@3.1.1/dist/htm.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="orientation-overlay">
+    <div class="rotate-icon">📱🔄</div>
+    <h2 style="font-family: 'Rajdhani', sans-serif; letter-spacing: 2px;">ROTATION REQUIRED</h2>
+    <p style="font-family: 'Rajdhani', sans-serif; opacity: 0.8;">Please rotate your device to landscape mode to enter the combat zone.</p>
+</div>
+
+<div id="root"></div>
+
+<script type="module" src="js/main.js"></script>
+
+</body>
+</html>

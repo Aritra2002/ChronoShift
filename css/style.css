@@ -1,0 +1,77 @@
+:root {
+    --primary-glow: rgba(0, 243, 255, 0.4);
+    --bg-deep: #050510;
+}
+
+body { 
+    margin: 0; 
+    overflow: hidden; 
+    background-color: var(--bg-deep); 
+    font-family: 'Rajdhani', sans-serif; 
+    touch-action: none; 
+    height: 100dvh; 
+    width: 100dvw; 
+}
+
+#root { 
+    width: 100%; 
+    height: 100dvh; 
+    display: flex; 
+    flex-direction: column; 
+    overflow: hidden;
+}
+
+canvas { 
+    display: block; 
+    width: 100%; 
+    height: 100%; 
+    touch-action: none; 
+}
+
+/* Modern Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #121225; }
+::-webkit-scrollbar-thumb { background: #00f3ff; border-radius: 2px; }
+
+/* Responsive UI Scaling */
+@media (max-width: 900px) {
+    .hud-text { font-size: 0.9rem !important; }
+    .hud-label { font-size: 0.6rem !important; }
+}
+
+@media (max-width: 600px) {
+    .hud-text { font-size: 0.75rem !important; }
+    .build-bar { gap: 8px !important; }
+}
+
+/* Orientation Overlay */
+#orientation-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: var(--bg-deep);
+    z-index: 9999;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #00f3ff;
+    text-align: center;
+    padding: 5vw;
+}
+
+@media screen and (orientation: portrait) and (max-width: 1024px) {
+    #orientation-overlay { display: flex; }
+    #root { display: none; }
+}
+
+.rotate-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: rotate 2s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(-90deg); }
+    100% { transform: rotate(0deg); }
+}
